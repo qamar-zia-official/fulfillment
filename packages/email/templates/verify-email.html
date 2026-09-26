@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<title>Verify your email</title>
+<!--[if mso]>
+<noscript>
+<xml>
+<o:OfficeDocumentSettings>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+</noscript>
+<style>
+  table {border-collapse:collapse;}
+  td,th,div,p,a,h1,h2,h3 {font-family:Arial, sans-serif;}
+</style>
+<![endif]-->
+<style>
+  :root { color-scheme: light dark; supported-color-schemes: light dark; }
+  body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+  table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+  img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+  body { margin: 0; padding: 0; width: 100% !important; height: 100% !important; background-color: #f4f4f5; }
+
+  .bg-body   { background-color: #f4f4f5; }
+  .bg-card   { background-color: #ffffff; }
+  .text-main { color: #18181b; }
+  .text-sub  { color: #71717a; }
+  .divider   { border-top: 1px solid #e4e4e7; }
+  .btn-bg    { background-color: #18181b; }
+  .btn-text  { color: #ffffff !important; }
+  .code-box  { background-color: #f4f4f5; color: #18181b; }
+
+  @media (prefers-color-scheme: dark) {
+    .bg-body   { background-color: #09090b !important; }
+    .bg-card   { background-color: #18181b !important; }
+    .text-main { color: #fafafa !important; }
+    .text-sub  { color: #a1a1aa !important; }
+    .divider   { border-top: 1px solid #27272a !important; }
+    .code-box  { background-color: #27272a !important; color: #fafafa !important; }
+    .btn-bg    { background-color: #fafafa !important; }
+    .btn-text  { color: #18181b !important; }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    a.btn:hover { background-color: #e4e4e7 !important; }
+  }
+
+  @media screen and (max-width: 600px) {
+    .email-container { width: 100% !important; }
+    .fluid-padding { padding-left: 20px !important; padding-right: 20px !important; }
+    .h1-mobile { font-size: 22px !important; line-height: 28px !important; }
+  }
+
+  a.btn:hover { background-color: #27272a !important; }
+</style>
+</head>
+<body class="bg-body" style="margin:0; padding:0; background-color:#f4f4f5;">
+  <!-- Preheader (hidden preview text) -->
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all;">
+    Confirm your email address to finish setting up your account. This link expires in 30 minutes.
+    &#847; &zwnj; &nbsp; &#8199; &#8203; &#847; &zwnj; &nbsp; &#8199; &#8203;
+  </div>
+
+  <center class="bg-body" style="width:100%; background-color:#f4f4f5;">
+    <table role="presentation" cellpadding="0" cellspacing="0" width="100%" class="bg-body">
+      <tr>
+        <td align="center" style="padding: 32px 16px;">
+
+          <table role="presentation" cellpadding="0" cellspacing="0" width="600" class="email-container" style="width:600px; max-width:600px;">
+            <!-- Logo -->
+            <tr>
+              <td align="center" style="padding-bottom: 24px;">
+                <img src="https://your-cdn.example.com/logo.png" width="140" alt="YourApp" style="display:block; width:140px;">
+              </td>
+            </tr>
+
+            <!-- Card -->
+            <tr>
+              <td class="bg-card" style="border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
+                <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td class="fluid-padding" style="padding: 40px 48px 24px 48px;">
+                      <h1 class="text-main h1-mobile" style="margin:0 0 16px 0; font-family:Arial,Helvetica,sans-serif; font-size:24px; line-height:30px; font-weight:700;">
+                        Confirm your email
+                      </h1>
+                      <p class="text-sub" style="margin:0 0 24px 0; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:24px;">
+                        Hi {{firstName}}, thanks for signing up. Click the button below to verify
+                        <strong class="text-main">{{userEmail}}</strong> and activate your account.
+                      </p>
+                    </td>
+                  </tr>
+
+                  <!-- Bulletproof button -->
+                  <tr>
+                    <td class="fluid-padding" align="center" style="padding: 0 48px 24px 48px;">
+                      <!--[if mso]>
+                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="{{verifyUrl}}" style="height:48px;v-text-anchor:middle;width:220px;" arcsize="12%" fillcolor="#18181b" stroke="f">
+                      <w:anchorlock/>
+                      <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Verify email address</center>
+                      </v:roundrect>
+                      <![endif]-->
+                      <!--[if !mso]><!-->
+                      <a href="{{verifyUrl}}" class="btn btn-bg btn-text" target="_blank"
+                         style="background-color:#18181b; color:#ffffff; display:inline-block; font-family:Arial,Helvetica,sans-serif; font-size:16px; font-weight:700; line-height:48px; text-align:center; text-decoration:none; width:220px; border-radius:8px; -webkit-text-size-adjust:none;">
+                        Verify email address
+                      </a>
+                      <!--<![endif]-->
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="fluid-padding" style="padding: 0 48px 32px 48px;">
+                      <p class="text-sub" style="margin:0; font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:20px;">
+                        Or paste this link into your browser:<br>
+                        <a href="{{verifyUrl}}" class="text-main" style="text-decoration:underline; word-break:break-all;">{{verifyUrl}}</a>
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr><td class="fluid-padding" style="padding: 0 48px;"><div class="divider"></div></td></tr>
+
+                  <tr>
+                    <td class="fluid-padding" style="padding: 24px 48px 40px 48px;">
+                      <p class="text-sub" style="margin:0; font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:20px;">
+                        This link expires in 30 minutes. If you didn't create an account with {{appName}}, you can safely ignore this email.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td align="center" style="padding: 24px 20px;">
+                <p class="text-sub" style="margin:0 0 8px 0; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:18px;">
+                  {{appName}}, {{companyAddress}}
+                </p>
+                <p class="text-sub" style="margin:0; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:18px;">
+                  <a href="{{helpUrl}}" style="color:#71717a; text-decoration:underline;">Need help?</a>
+                </p>
+              </td>
+            </tr>
+          </table>
+
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+</html>

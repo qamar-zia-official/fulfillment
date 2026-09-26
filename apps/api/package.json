@@ -1,0 +1,20 @@
+{
+  "name": "hono",
+  "type": "module",
+  "dependencies": {
+    "hono": "^4.13.8",
+    "@repo/db": "workspace:*",
+    "@repo/auth": "workspace:*",
+    "@repo/validation": "workspace:*",
+    "@repo/email": "workspace:*",
+    "@repo/tasks": "workspace:*"
+  },
+  "scripts": {
+    "dev": "bun run --hot src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "tsx": "^4.23.0",
+    "typescript": "^7.0.2"
+  }
+}

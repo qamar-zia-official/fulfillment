@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<title>Welcome to {{appName}}</title>
+<!--[if mso]><style>table {border-collapse:collapse;} td,th,div,p,a,h1,h2,h3 {font-family:Arial, sans-serif;}</style><![endif]-->
+<style>
+  body { margin:0; padding:0; width:100% !important; background-color:#f4f4f5; }
+  img { border:0; height:auto; -ms-interpolation-mode:bicubic; }
+  .bg-body  { background-color:#f4f4f5; }
+  .bg-card  { background-color:#ffffff; }
+  .text-main{ color:#18181b; }
+  .text-sub { color:#71717a; }
+  .divider  { border-top:1px solid #e4e4e7; }
+  .step-num { background-color:#e4e4e7; color:#18181b; }
+  .btn-bg   { background-color:#18181b; }
+  .btn-text { color:#ffffff !important; }
+
+  @media (prefers-color-scheme: dark) {
+    .bg-body  { background-color:#09090b !important; }
+    .bg-card  { background-color:#18181b !important; }
+    .text-main{ color:#fafafa !important; }
+    .text-sub { color:#a1a1aa !important; }
+    .divider  { border-top:1px solid #27272a !important; }
+    .step-num { background-color:#3f3f46 !important; color:#f4f4f5 !important; }
+    .btn-bg   { background-color:#fafafa !important; }
+    .btn-text { color:#18181b !important; }
+  }
+  @media (prefers-color-scheme: dark) {
+    a.btn:hover { background-color:#e4e4e7 !important; }
+  }
+  @media screen and (max-width:600px) {
+    .email-container { width:100% !important; }
+    .fluid-padding { padding-left:20px !important; padding-right:20px !important; }
+    .hero-img { height:auto !important; }
+  }
+  a.btn:hover { background-color:#27272a !important; }
+</style>
+</head>
+<body class="bg-body" style="margin:0; padding:0;">
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all;">
+    You're in! Here's how to get the most out of {{appName}} in the next 5 minutes.
+    &#847; &zwnj; &nbsp; &#8199; &#8203;
+  </div>
+
+  <center class="bg-body" style="width:100%;">
+    <table role="presentation" cellpadding="0" cellspacing="0" width="100%" class="bg-body">
+      <tr>
+        <td align="center" style="padding:32px 16px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" width="600" class="email-container" style="width:600px; max-width:600px;">
+
+            <tr>
+              <td align="center" style="padding-bottom:24px;">
+                <img src="https://your-cdn.example.com/logo.png" width="140" alt="YourApp" style="display:block; width:140px;">
+              </td>
+            </tr>
+
+            <tr>
+              <td class="bg-card" style="border-radius:12px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,0.06);">
+
+                <img src="https://your-cdn.example.com/welcome-hero.png" width="600" alt="" class="hero-img" style="display:block; width:100%; max-width:600px; height:200px; object-fit:cover;">
+
+                <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td class="fluid-padding" style="padding:32px 48px 8px 48px;">
+                      <h1 class="text-main" style="margin:0 0 12px 0; font-family:Arial,Helvetica,sans-serif; font-size:24px; line-height:30px; font-weight:700;">
+                        Welcome, {{firstName}} 👋
+                      </h1>
+                      <p class="text-sub" style="margin:0 0 24px 0; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:24px;">
+                        Your {{appName}} account is ready. Here are three quick things to help you get set up.
+                      </p>
+                    </td>
+                  </tr>
+
+                  <!-- Step list -->
+                  <tr>
+                    <td class="fluid-padding" style="padding:0 48px;">
+                      <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td width="40" valign="top" style="padding-bottom:20px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+                              <td class="step-num" width="28" height="28" align="center" valign="middle" style="border-radius:50%; font-family:Arial,sans-serif; font-size:13px; font-weight:700;">1</td>
+                            </tr></table>
+                          </td>
+                          <td valign="top" style="padding-bottom:20px; padding-left:8px;">
+                            <p class="text-main" style="margin:0 0 2px 0; font-family:Arial,Helvetica,sans-serif; font-size:15px; font-weight:700;">Complete your profile</p>
+                            <p class="text-sub" style="margin:0; font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:20px;">Add a photo and a few details so your team recognizes you.</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width="40" valign="top" style="padding-bottom:20px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+                              <td class="step-num" width="28" height="28" align="center" valign="middle" style="border-radius:50%; font-family:Arial,sans-serif; font-size:13px; font-weight:700;">2</td>
+                            </tr></table>
+                          </td>
+                          <td valign="top" style="padding-bottom:20px; padding-left:8px;">
+                            <p class="text-main" style="margin:0 0 2px 0; font-family:Arial,Helvetica,sans-serif; font-size:15px; font-weight:700;">Invite your team</p>
+                            <p class="text-sub" style="margin:0; font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:20px;">{{appName}} works best when everyone's in the same workspace.</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width="40" valign="top">
+                            <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+                              <td class="step-num" width="28" height="28" align="center" valign="middle" style="border-radius:50%; font-family:Arial,sans-serif; font-size:13px; font-weight:700;">3</td>
+                            </tr></table>
+                          </td>
+                          <td valign="top" style="padding-left:8px;">
+                            <p class="text-main" style="margin:0 0 2px 0; font-family:Arial,Helvetica,sans-serif; font-size:15px; font-weight:700;">Connect your first integration</p>
+                            <p class="text-sub" style="margin:0; font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:20px;">Pull in data from tools you already use.</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="fluid-padding" align="center" style="padding:28px 48px 40px 48px;">
+                      <!--[if mso]>
+                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="{{dashboardUrl}}" style="height:48px;v-text-anchor:middle;width:220px;" arcsize="12%" fillcolor="#18181b" stroke="f">
+                      <w:anchorlock/>
+                      <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Go to your dashboard</center>
+                      </v:roundrect>
+                      <![endif]-->
+                      <!--[if !mso]><!-->
+                      <a href="{{dashboardUrl}}" class="btn btn-bg btn-text" target="_blank"
+                         style="background-color:#18181b; color:#ffffff !important; display:inline-block; font-family:Arial,Helvetica,sans-serif; font-size:16px; font-weight:700; line-height:48px; text-align:center; text-decoration:none; width:220px; border-radius:8px;">
+                        Go to your dashboard
+                      </a>
+                      <!--<![endif]-->
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center" style="padding:24px 20px;">
+                <p class="text-sub" style="margin:0 0 8px 0; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:18px;">
+                  Questions? Just reply to this email — a real person reads these.
+                </p>
+                <p class="text-sub" style="margin:0; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:18px;">
+                  {{appName}}, {{companyAddress}}
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+</html>

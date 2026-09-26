@@ -1,0 +1,20 @@
+{
+  "name": "@repo/tasks",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./*": "./*"
+  },
+  "dependencies": {
+    "@trigger.dev/sdk": "4.6.4",
+    "trigger.dev": "^4.6.4",
+    "@repo/email": "workspace:*"
+  },
+  "devDependencies": {
+    "@trigger.dev/build": "4.6.4"
+  },
+  "scripts": {
+    "dev": "bunx trigger.dev@latest dev"
+  }
+}

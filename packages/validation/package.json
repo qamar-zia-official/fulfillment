@@ -1,0 +1,12 @@
+{
+  "name": "@repo/validation",
+  "type": "module",
+  "private": true,
+  "version": "0.0.0",
+  "exports": {
+    "./*": "./*"
+  },
+  "dependencies": {
+    "zod": "^4.6.5"
+  }
+}

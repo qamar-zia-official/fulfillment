@@ -1,0 +1,11 @@
+{
+  "name": "@repo/email",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./*": "./*"
+  },
+  "dependencies": {
+    "resend": "^6.30.0"
+  }
+}

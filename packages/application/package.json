@@ -1,0 +1,15 @@
+{
+  "name": "@repo/app",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./*": "./*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  }
+}

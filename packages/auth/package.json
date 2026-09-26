@@ -1,0 +1,12 @@
+{
+  "name": "@repo/auth",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "exports": {
+    "./*": "./*"
+  },
+  "dependencies": {
+    "better-auth": "^1.7.5"
+  }
+}

@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<title>{{campaignSubject}}</title>
+<!--[if mso]><style>table {border-collapse:collapse;} td,th,div,p,a,h1,h2,h3 {font-family:Arial, sans-serif;}</style><![endif]-->
+<style>
+  body { margin:0; padding:0; width:100% !important; background-color:#f4f4f5; }
+  img { border:0; height:auto; -ms-interpolation-mode:bicubic; }
+  .bg-body  { background-color:#f4f4f5; }
+  .bg-card  { background-color:#ffffff; }
+  .text-main{ color:#18181b; }
+  .text-sub { color:#71717a; }
+  .divider  { border-top:1px solid #e4e4e7; }
+  .tag      { background-color:#e4e4e7; color:#18181b; }
+  .card-2   { background-color:#fafafa; border:1px solid #e4e4e7; }
+  .btn-bg   { background-color:#18181b; }
+  .btn-text { color:#ffffff !important; }
+
+  @media (prefers-color-scheme: dark) {
+    .bg-body  { background-color:#09090b !important; }
+    .bg-card  { background-color:#18181b !important; }
+    .text-main{ color:#fafafa !important; }
+    .text-sub { color:#a1a1aa !important; }
+    .divider  { border-top:1px solid #27272a !important; }
+    .tag      { background-color:#3f3f46 !important; color:#f4f4f5 !important; }
+    .card-2   { background-color:#27272a !important; border:1px solid #3f3f46 !important; }
+    .btn-bg   { background-color:#fafafa !important; }
+    .btn-text { color:#18181b !important; }
+  }
+  @media (prefers-color-scheme: dark) {
+    a.btn:hover { background-color:#e4e4e7 !important; }
+  }
+  @media screen and (max-width:600px) {
+    .email-container { width:100% !important; }
+    .fluid-padding { padding-left:20px !important; padding-right:20px !important; }
+    .stack { display:block !important; width:100% !important; }
+    .stack-pad { padding-bottom:16px !important; }
+  }
+  a.btn:hover { background-color:#27272a !important; }
+</style>
+</head>
+<body class="bg-body" style="margin:0; padding:0;">
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all;">
+    {{preheaderText}}
+    &#847; &zwnj; &nbsp; &#8199; &#8203;
+  </div>
+
+  <center class="bg-body" style="width:100%;">
+    <table role="presentation" cellpadding="0" cellspacing="0" width="100%" class="bg-body">
+      <tr>
+        <td align="center" style="padding:32px 16px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" width="600" class="email-container" style="width:600px; max-width:600px;">
+
+            <!-- Header / logo + view-in-browser -->
+            <tr>
+              <td style="padding-bottom:16px;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="left">
+                      <img src="https://your-cdn.example.com/logo.png" width="120" alt="YourApp" style="display:block; width:120px;">
+                    </td>
+                    <td align="right">
+                      <a href="{{webViewUrl}}" class="text-sub" style="font-family:Arial,Helvetica,sans-serif; font-size:12px; text-decoration:underline;">View in browser</a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Hero -->
+            <tr>
+              <td class="bg-card" style="border-radius:12px 12px 0 0; overflow:hidden;">
+                <img src="https://your-cdn.example.com/campaign-hero.png" width="600" alt="" style="display:block; width:100%; max-width:600px;">
+              </td>
+            </tr>
+
+            <tr>
+              <td class="bg-card" style="box-shadow:0 1px 3px rgba(0,0,0,0.06);">
+                <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td class="fluid-padding" style="padding:32px 48px 8px 48px;">
+                      <span class="tag" style="display:inline-block; padding:4px 10px; border-radius:999px; font-family:Arial,Helvetica,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase;">{{campaignTag}}</span>
+                      <h1 class="text-main" style="margin:16px 0 12px 0; font-family:Arial,Helvetica,sans-serif; font-size:24px; line-height:30px; font-weight:700;">
+                        {{campaignHeadline}}
+                      </h1>
+                      <p class="text-sub" style="margin:0 0 24px 0; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:24px;">
+                        {{campaignBody}}
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="fluid-padding" align="center" style="padding:0 48px 32px 48px;">
+                      <!--[if mso]>
+                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="{{ctaUrl}}" style="height:48px;v-text-anchor:middle;width:220px;" arcsize="12%" fillcolor="#18181b" stroke="f">
+                      <w:anchorlock/>
+                      <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">{{ctaLabel}}</center>
+                      </v:roundrect>
+                      <![endif]-->
+                      <!--[if !mso]><!-->
+                      <a href="{{ctaUrl}}" class="btn btn-bg btn-text" target="_blank"
+                         style="background-color:#18181b; color:#ffffff !important; display:inline-block; font-family:Arial,Helvetica,sans-serif; font-size:16px; font-weight:700; line-height:48px; text-align:center; text-decoration:none; width:220px; border-radius:8px;">
+                        {{ctaLabel}}
+                      </a>
+                      <!--<![endif]-->
+                    </td>
+                  </tr>
+
+                  <tr><td class="fluid-padding" style="padding:0 48px;"><div class="divider"></div></td></tr>
+
+                  <!-- Two-up secondary content, stacks on mobile -->
+                  <tr>
+                    <td class="fluid-padding" style="padding:28px 48px 32px 48px;">
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td class="stack" width="48%" valign="top" style="padding-right:2%;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="card-2" style="border-radius:8px;">
+                              <tr><td style="padding:16px;">
+                                <p class="text-main" style="margin:0 0 4px 0; font-family:Arial,Helvetica,sans-serif; font-size:14px; font-weight:700;">{{feature1Title}}</p>
+                                <p class="text-sub" style="margin:0; font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:18px;">{{feature1Body}}</p>
+                              </td></tr>
+                            </table>
+                          </td>
+                          <td class="stack stack-pad" width="48%" valign="top" style="padding-left:2%;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="card-2" style="border-radius:8px;">
+                              <tr><td style="padding:16px;">
+                                <p class="text-main" style="margin:0 0 4px 0; font-family:Arial,Helvetica,sans-serif; font-size:14px; font-weight:700;">{{feature2Title}}</p>
+                                <p class="text-sub" style="margin:0; font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:18px;">{{feature2Body}}</p>
+                              </td></tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- CAN-SPAM / GDPR compliant footer -->
+            <tr>
+              <td align="center" style="padding:24px 20px;">
+                <table role="presentation" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="padding:0 6px;"><a href="{{socialTwitterUrl}}"><img src="https://your-cdn.example.com/icon-x.png" width="20" height="20" alt="X"></a></td>
+                    <td style="padding:0 6px;"><a href="{{socialLinkedinUrl}}"><img src="https://your-cdn.example.com/icon-linkedin.png" width="20" height="20" alt="LinkedIn"></a></td>
+                  </tr>
+                </table>
+                <p class="text-sub" style="margin:16px 0 8px 0; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:18px;">
+                  {{appName}}, {{companyAddress}}
+                </p>
+                <p class="text-sub" style="margin:0; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:18px;">
+                  You're receiving this because you're a {{appName}} user.
+                  <a href="{{preferencesUrl}}" style="color:#71717a; text-decoration:underline;">Manage preferences</a>
+                  &nbsp;·&nbsp;
+                  <a href="{{unsubscribeUrl}}" style="color:#71717a; text-decoration:underline;">Unsubscribe</a>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+</html>
