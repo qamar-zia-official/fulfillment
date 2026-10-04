@@ -4,14 +4,37 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./*": "./*"
+    ".": "./src/index.ts",
+    "./client": "./src/client.ts",
+    "./schema": "./src/schema/index.ts",
+    "./repositories/shopify-order-webhook": "./src/repositories/shopify-order-webhook.ts"
   },
   "dependencies": {
+    "@repo/application": "workspace:*",
+    "@repo/validation": "workspace:*",
     "dotenv": "^18.0.3",
     "drizzle-orm": "^0.45.3",
-    "zod": "^4.6.5"
+    "postgres": "^3.4.7",
+    "zod": "^4.6.5",
+    "@repo/domain": "workspace:*"
   },
   "devDependencies": {
-    "drizzle-kit": "^0.31.11"
+    "@babel/preset-typescript": "8.0.1",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/bun": "latest",
+    "@types/node": "^26.6.2",
+    "drizzle-kit": "^0.31.11",
+    "eslint": "10.9.1",
+    "typescript": "^7.0.2"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "test": "bun test"
   }
 }

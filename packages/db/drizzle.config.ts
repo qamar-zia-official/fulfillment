@@ -1,13 +1,16 @@
-import { config } from "dotenv";
 import { defineConfig } from "drizzle-kit";
+import { parseDatabaseEnvironment } from "@repo/validation/environment";
+import { loadRepositoryEnvironment } from "@repo/validation/environment-loader";
 
-config({ path: ".env.local" });
+loadRepositoryEnvironment();
+
+const environment = parseDatabaseEnvironment();
 
 export default defineConfig({
   out: "./drizzle",
-  schema: "./schemas/schema.ts",
+  schema: "./src/schema/index.ts",
   dialect: "postgresql",
   dbCredentials: {
-    url: process.env.DATABASE_URL!,
+    url: environment.DATABASE_URL,
   },
 });

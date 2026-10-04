@@ -6,7 +6,13 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
+    "typecheck": "turbo run typecheck",
+    "check-types": "bun run typecheck",
+    "test": "turbo run test",
+    "db:generate": "turbo run db:generate --filter=@repo/db",
+    "db:migrate": "turbo run db:migrate --filter=@repo/db",
+    "db:push": "turbo run db:push --filter=@repo/db",
+    "db:studio": "turbo run db:studio --filter=@repo/db"
   },
   "devDependencies": {
     "prettier": "3.9.6",
@@ -14,8 +20,10 @@
     "typescript": "7.0.2"
   },
   "engines": {
-    "node": ">=24"
+    "node": ">=24",
+    "bun": ">=1.4.0"
   },
+  "packageManager": "bun@1.4.0",
   "devEngines": {
     "packageManager": {
       "name": "bun",

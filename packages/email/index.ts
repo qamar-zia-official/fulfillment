@@ -1,6 +1,24 @@
 import { Resend } from "resend";
 
-export const resend = new Resend(process.env.RESEND_API_KEY!);
+let client: Resend | undefined;
+
+/**
+ * Lazily constructs the Resend client.
+ *
+ * The previous version did `new Resend(process.env.RESEND_API_KEY!)` at module scope.
+ * That is an import-time side effect: merely importing this module (from a test, a
+ * health check, or any package that does not send mail) would construct an
+ * unauthenticated client, and the `!` silently swallowed a missing key instead of
+ * failing where the problem actually is.
+ *
+ * Note: this package still contains a large set of HTML template builders. Those are
+ * unrelated to the fulfillment platform and are being left untouched for now; they are
+ * a candidate for deletion once it is confirmed that no marketing surface needs them.
+ */
+export function getResendClient(): Resend {
+  client ??= new Resend(process.env.RESEND_API_KEY);
+  return client;
+}
 
 export const verifyEmailMail = (
   appName: string,
@@ -484,15 +502,19 @@ export const loginMail = (
   </center>
 </body>
 </html>
-
 `;
 
-export const welcomeMail = (
-  appName: string,
-  firstName: string,
-  dashboardUrl: string,
-  companyAddress: string,
-) => `
+export const welcomeMail = ({
+  appName,
+  companyAddress,
+  dashboardUrl,
+  firstName,
+}: {
+  appName: string;
+  firstName: string;
+  dashboardUrl: string;
+  companyAddress: string;
+}) => `
 <!doctype html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -546,13 +568,11 @@ export const welcomeMail = (
       <tr>
         <td align="center" style="padding:32px 16px;">
           <table role="presentation" cellpadding="0" cellspacing="0" width="600" class="email-container" style="width:600px; max-width:600px;">
-
             <tr>
               <td align="center" style="padding-bottom:24px;">
                 <img src="https://your-cdn.example.com/logo.png" width="140" alt="YourApp" style="display:block; width:140px;">
               </td>
             </tr>
-
             <tr>
               <td class="bg-card" style="border-radius:12px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,0.06);">
 

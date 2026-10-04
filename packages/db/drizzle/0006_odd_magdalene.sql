@@ -1,0 +1,2 @@
+ALTER TABLE "exceptions" DROP CONSTRAINT "exceptions_severity_check";--> statement-breakpoint
+ALTER TABLE "exceptions" ADD CONSTRAINT "exceptions_severity_check" CHECK ("exceptions"."severity" in ('blocking', 'warning'));

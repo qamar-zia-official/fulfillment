@@ -4,6 +4,20 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./*": "./*"
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "8.0.1",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/bun": "latest",
+    "eslint": "10.9.1",
+    "typescript": "^7.0.2"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
   }
 }

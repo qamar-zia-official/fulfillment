@@ -7,10 +7,11 @@
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component",
-    "check-types": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "8.0.1",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "@types/node": "26.4.1",

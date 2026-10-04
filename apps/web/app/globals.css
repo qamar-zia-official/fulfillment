@@ -1,12 +1,47 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Semantic tokens for the operations console. Named for role rather than colour, so the dark
+     block below is a full restatement of the same relationships instead of a hunt for the hex
+     that means "muted". */
+  --surface: #ffffff;
+  --surface-raised: #fafafa;
+  --surface-sunken: #f4f4f5;
+  --border: #e4e4e7;
+  --border-strong: #d4d4d8;
+  --muted: #71717a;
+  --accent: #1d4ed8;
+  --accent-contrast: #ffffff;
+  --danger: #b91c1c;
+  --danger-surface: #fef2f2;
+  --warning: #b45309;
+  --warning-surface: #fffbeb;
+  --good: #047857;
+  --good-surface: #ecfdf5;
+  --focus: #2563eb;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #09090b;
     --foreground: #ededed;
+
+    --surface: #111113;
+    --surface-raised: #18181b;
+    --surface-sunken: #0c0c0e;
+    --border: #27272a;
+    --border-strong: #3f3f46;
+    --muted: #a1a1aa;
+    --accent: #60a5fa;
+    --accent-contrast: #09090b;
+    --danger: #fca5a5;
+    --danger-surface: #2a1214;
+    --warning: #fcd34d;
+    --warning-surface: #2a2011;
+    --good: #6ee7b7;
+    --good-surface: #0e2620;
+    --focus: #60a5fa;
   }
 }
 
@@ -32,19 +67,17 @@ a {
   text-decoration: none;
 }
 
-.imgDark {
-  display: none;
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-
-  .imgLight {
-    display: none;
-  }
-  .imgDark {
-    display: unset;
-  }
+/* One focus style for the whole console. Removing outlines makes the console unusable by
+   keyboard, and the queue is navigated with Tab as much as with a mouse. */
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
 }

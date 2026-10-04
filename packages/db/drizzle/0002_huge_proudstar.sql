@@ -1,0 +1,1 @@
+ALTER TABLE "orders" ADD CONSTRAINT "orders_cancelled_requires_timestamp_check" CHECK ("orders"."status" <> 'cancelled' or "orders"."cancelled_at" is not null);

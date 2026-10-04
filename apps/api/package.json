@@ -1,19 +1,30 @@
 {
-  "name": "hono",
+  "name": "@repo/api",
   "type": "module",
   "dependencies": {
     "hono": "^4.13.8",
     "@repo/db": "workspace:*",
     "@repo/auth": "workspace:*",
+    "@repo/domain": "workspace:*",
     "@repo/validation": "workspace:*",
     "@repo/email": "workspace:*",
-    "@repo/tasks": "workspace:*"
+    "@repo/tasks": "workspace:*",
+    "@repo/application": "workspace:*"
   },
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "dev": "bun run --hot src/server.ts",
+    "build": "bun build ./src/server.ts --outdir ./dist --target bun",
+    "start": "bun run ./dist/server.js",
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
   },
   "devDependencies": {
     "@types/node": "^26.1.1",
+    "@types/bun": "latest",
+    "@repo/eslint-config": "workspace:*",
+    "eslint": "10.9.1",
+    "@babel/preset-typescript": "8.0.1",
     "tsx": "^4.23.0",
     "typescript": "^7.0.2"
   }

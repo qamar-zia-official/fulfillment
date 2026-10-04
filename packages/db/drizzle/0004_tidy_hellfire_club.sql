@@ -1,0 +1,2 @@
+ALTER TABLE "audit_events" DROP CONSTRAINT "audit_events_event_type_check";--> statement-breakpoint
+ALTER TABLE "audit_events" ADD CONSTRAINT "audit_events_event_type_check" CHECK ("audit_events"."event_type" in ('ORDER_CREATED','ORDER_UPDATED','ORDER_CANCELLED','ORDER_ALLOCATED','ORDER_DEALLOCATED'));

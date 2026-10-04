@@ -1,15 +1,28 @@
 {
-  "name": "@repo/app",
-  "module": "index.ts",
+  "name": "@repo/application",
   "type": "module",
   "private": true,
   "exports": {
-    "./*": "./*"
+    ".": "./src/index.ts"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@babel/preset-typescript": "8.0.1",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/bun": "latest",
+    "@types/node": "^26.6.2",
+    "eslint": "10.9.1"
   },
   "peerDependencies": {
     "typescript": "^7"
+  },
+  "dependencies": {
+    "@repo/domain": "workspace:*",
+    "@repo/validation": "workspace:*"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
   }
 }

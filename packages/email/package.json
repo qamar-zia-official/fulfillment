@@ -2,10 +2,23 @@
   "name": "@repo/email",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "exports": {
-    "./*": "./*"
+    ".": "./index.ts"
   },
   "dependencies": {
     "resend": "^6.30.0"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "8.0.1",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^26.6.2",
+    "eslint": "10.9.1",
+    "typescript": "^7.0.2"
   }
 }

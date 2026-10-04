@@ -4,17 +4,31 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./*": "./*"
+    "./send-email": "./src/trigger/send-email.ts",
+    "./route-pending-orders": "./src/trigger/route-pending-orders.ts"
   },
   "dependencies": {
+    "@repo/application": "workspace:*",
+    "@repo/db": "workspace:*",
+    "@repo/domain": "workspace:*",
+    "@repo/email": "workspace:*",
     "@trigger.dev/sdk": "4.6.4",
-    "trigger.dev": "^4.6.4",
-    "@repo/email": "workspace:*"
+    "trigger.dev": "^4.6.4"
   },
   "devDependencies": {
-    "@trigger.dev/build": "4.6.4"
+    "@babel/preset-typescript": "8.0.1",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@trigger.dev/build": "4.6.4",
+    "eslint": "10.9.1",
+    "typescript": "^7.0.2",
+    "@types/bun": "latest"
   },
   "scripts": {
-    "dev": "bunx trigger.dev@latest dev"
+    "dev": "bun --env-file=../../.env x trigger.dev dev",
+    "deploy": "bun --env-file=../../.env x trigger.dev deploy",
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
   }
 }

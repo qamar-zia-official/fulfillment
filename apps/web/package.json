@@ -8,26 +8,32 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --max-warnings 0",
-    "check-types": "next typegen && tsc --noEmit"
+    "test": "bun test",
+    "typecheck": "next typegen && tsc --noEmit",
+    "check-types": "bun run typecheck"
   },
   "dependencies": {
-    "@repo/ui": "workspace:*",
-    "@repo/db": "workspace:*",
+    "@next/env": "16.3.4",
+    "@repo/application": "workspace:*",
     "@repo/auth": "workspace:*",
+    "@repo/db": "workspace:*",
+    "@repo/domain": "workspace:*",
+    "@repo/ui": "workspace:*",
     "@repo/validation": "workspace:*",
-    "@repo/email": "workspace:*",
-    "@repo/tasks": "workspace:*",
+    "better-auth": "^1.7.5",
     "next": "16.3.4",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
+    "@types/bun": "latest",
     "@repo/typescript-config": "*",
     "@types/node": "26.4.1",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.5",
     "eslint": "10.9.1",
+    "@babel/preset-typescript": "8.0.1",
     "typescript": "7.0.2"
   }
 }

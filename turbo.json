@@ -1,17 +1,74 @@
 {
   "$schema": "https://turborepo.dev/schema.json",
   "ui": "tui",
+
+  // The repo-root `.env` is the single source of truth for every app and package.
+  // Listing it here means Turbo's cache key changes when it changes, and it documents
+  // the file as an input rather than leaving it as invisible ambient state.
+  "globalDependencies": [".env"],
+
+  // Turborepo 2 defaults to `envMode: "strict"`, which means any variable NOT declared
+  // here is STRIPPED from the task's environment. Without these declarations
+  // DATABASE_URL, BETTER_AUTH_SECRET, etc. silently vanish inside every task run through
+  // Turbo -- no error, just an undefined variable. That is a genuinely painful class of
+  // bug, so we declare the names explicitly. Only names are committed here, never values.
+  //
+  // Secrets are declared in `globalPassThroughEnv` rather than `globalEnv` on purpose:
+  // `globalEnv` participates in the task hash, and we do not want secret material
+  // (even hashed) influencing a cache key that may be uploaded to a remote cache.
+  "globalEnv": ["NEXT_PUBLIC_API_URL"],
+  "globalPassThroughEnv": [
+    "NODE_ENV",
+    "API_PORT",
+    "DATABASE_URL",
+    "BETTER_AUTH_SECRET",
+    "BETTER_AUTH_URL",
+    "WEB_APP_URL",
+    "OPERATOR_EMAILS",
+    "SHOPIFY_WEBHOOK_SECRET",
+    "SHOPIFY_CLIENT_ID",
+    "SHOPIFY_CLIENT_SECRET",
+    "RESEND_API_KEY",
+    "THREE_PL_API_KEY",
+    "SHIPPO_API_KEY",
+    "TRIGGER_SECRET_KEY",
+    "TRIGGER_API_KEY",
+    "CLOUDINARY_CLOUD_NAME",
+    "CLOUDINARY_API_KEY",
+    "CLOUDINARY_API_SECRET",
+    "GOOGLE_CLIENT_ID",
+    "GOOGLE_CLIENT_SECRET"
+  ],
+
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**", "!.next/dev/**"]
+      "outputs": [".next/**", "!.next/cache/**", "!.next/dev/**", "dist/**"]
     },
     "lint": {
       "dependsOn": ["^lint"]
     },
-    "check-types": {
-      "dependsOn": ["^check-types"]
+    "typecheck": {
+      "dependsOn": ["^typecheck"],
+      "outputs": []
+    },
+    "test": {
+      "dependsOn": ["^test"],
+      "outputs": []
+    },
+    "db:generate": {
+      "cache": false
+    },
+    "db:migrate": {
+      "cache": false
+    },
+    "db:push": {
+      "cache": false
+    },
+    "db:studio": {
+      "cache": false,
+      "persistent": true
     },
     "dev": {
       "cache": false,

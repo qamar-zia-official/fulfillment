@@ -1,0 +1,55 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1790585484880,
+      "tag": "0000_green_electro",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790595548687,
+      "tag": "0001_wonderful_grim_reaper",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1790596824824,
+      "tag": "0002_huge_proudstar",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1790620188124,
+      "tag": "0003_aspiring_clea",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1790620885304,
+      "tag": "0004_tidy_hellfire_club",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1790674037628,
+      "tag": "0005_clumsy_lila_cheney",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1790674127931,
+      "tag": "0006_odd_magdalene",
+      "breakpoints": true
+    }
+  ]
+}
